@@ -50,13 +50,17 @@ Login with Google
 </View>
 
 
+<TouchableOpacity
+onPress={()=> navigation.navigate("Signup")}
+>
 <Text style={{
-      fontWeight:500,
-      fontSize:15,
+      // fontWeight:500,
+      fontSize:18,
       color:"#000000",
       textAlign:"center",
       paddingTop:25
 }}>Don’t have an account? <Text style={{color:"#1877F2"}}>Sign Up</Text></Text>
+</TouchableOpacity>
 
 
   </View>
@@ -100,6 +104,7 @@ const styles = StyleSheet.create({
     width: screenWidth * 0.9,
     textAlign: "center",
     fontSize: 18,
+    fontWeight:500
   },
   overlay:{
     position:"absolute",
@@ -115,7 +120,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius:30,
     borderTopRightRadius:30,
     width:screenWidth,
-    height:screenHeight*0.42,
+    height:294,
     backgroundColor:"#FFFFFF",
     paddingHorizontal:20,
     paddingTop:20
@@ -156,7 +161,8 @@ const styles = StyleSheet.create({
     color:"#ffffff",
     fontWeight:500,
     fontSize:15,
-    marginLeft:10
+    marginLeft:10,
+    
   },
   btnText2:{
     color:"#000000",

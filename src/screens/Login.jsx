@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View, SafeAreaView, Pressable, TextInput  } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Pressable, TextInput, TouchableOpacity  } from 'react-native'
 import { Ionicons } from '@expo/vector-icons';
 import React, { useState } from 'react'
 import { MaterialIcons } from '@expo/vector-icons';
 import { screenWidth } from './Welcome';
 import CountryPicker from 'react-native-country-picker-modal'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 const Login = ({navigation}) => {
   
@@ -11,10 +12,16 @@ const Login = ({navigation}) => {
 const[callingCode,setCallingCode]=useState("+234")
 const[countryCode, setCountryCode]=useState("NG")
 const[phoneNumberVal, setPhoneNumberVal]=useState("")
+const[focus, setFocus]=useState(false)
 
   return (
     
-    <View style={styles.container}>
+   <KeyboardAwareScrollView
+   contentContainerStyle={{
+    flex:1
+   }}
+   >
+     <View style={styles.container}>
           <SafeAreaView/>
       <Pressable style={styles.back}
       onPress={()=> navigation.goBack()}
@@ -76,15 +83,21 @@ onSelect={(val)=>{
 </View>
 
 <TextInput
-style={styles.phoneNoInput}
+style={[styles.phoneNoInput,{borderColor: focus?"#9D69FC":"gray"}]}
 placeholder='993 4567 221'
 placeholderTextColor={"#848484"}
-keyboardType='numeric'
+keyboardType='numbers-and-punctuation'
 value={phoneNumberVal}
 onChangeText={(val)=>{
  setPhoneNumberVal(val)
 }}
 maxLength={12}
+onFocus={()=> {
+  setFocus(true)
+}}
+onBlur={()=> {
+  setFocus(false)
+}}
 />
       </View>
       <Text
@@ -114,15 +127,18 @@ style={{
 }}
 >
 
-<View style={styles.btn}>
+<TouchableOpacity style={styles.btn}
+
+>
 
 <Text style={styles.btnText}>
 Login
 </Text>
-</View>
+</TouchableOpacity>
 
 </View>
     </View>
+   </KeyboardAwareScrollView>
   )
 }
 
