@@ -56,7 +56,10 @@ style={[styles.secondText, {marginBottom:20}]}
   category.map((item,index)=>{
     return(
       <Pressable
-     onPress={()=> setSelectCategory(index)}
+     onPress={()=> {
+      setSelectCategory(index)
+      navigation.navigate("Register")
+     }}
       key={index.toString()}
 style={[styles.categoryBox,{
   backgroundColor:selectCategory === index ?"#9D69FB":"#ffffff",

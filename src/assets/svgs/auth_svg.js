@@ -99,3 +99,185 @@ export function NOTIFY({props}) {
 }
 
 
+
+export function HOMEICON({props}) {
+  return (
+    <Svg
+    width={29}
+    height={29}
+      viewBox="0 0 30 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <Path
+        d="M1 10.8L15 1l14 9.8v15.4c0 .743-.328 1.455-.911 1.98a3.295 3.295 0 01-2.2.82H4.11a3.295 3.295 0 01-2.2-.82C1.328 27.655 1 26.943 1 26.2V10.8z"
+        stroke="#191D23"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M10.333 29V15h9.334v14"
+        stroke="#191D23"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  )
+}
+export function HOMEICON2({props}) {
+  return (
+    <Svg
+    width={25}
+    height={25}
+      viewBox="0 0 30 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <Path
+        d="M1 10.8L15 1l14 9.8v15.4c0 .743-.328 1.455-.911 1.98a3.295 3.295 0 01-2.2.82H4.11a3.295 3.295 0 01-2.2-.82C1.328 27.655 1 26.943 1 26.2V10.8z"
+        stroke="#fff"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M10.333 29V15h9.334v14"
+        stroke="#fff"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  )
+}
+
+export function LOVE({props}) {
+  return (
+    <Svg
+      width={27}
+      height={24}
+      viewBox="0 0 27 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <Path
+        d="M23.84 3.245a6.417 6.417 0 00-9.077 0l-1.236 1.237-1.237-1.237a6.418 6.418 0 00-9.077 9.077l1.237 1.237 9.077 9.076 9.076-9.076 1.237-1.237a6.419 6.419 0 000-9.077v0z"
+        stroke="#000"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  )
+}
+export function LOVE2({props}) {
+  return (
+    <Svg
+      width={27}
+      height={24}
+      viewBox="0 0 27 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <Path
+        d="M23.84 3.245a6.417 6.417 0 00-9.077 0l-1.236 1.237-1.237-1.237a6.418 6.418 0 00-9.077 9.077l1.237 1.237 9.077 9.076 9.076-9.076 1.237-1.237a6.419 6.419 0 000-9.077v0z"
+        stroke="#fff"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  )
+}
+
+export function CHATICON({props}) {
+    return (
+      <Svg
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <Path
+        d="M22.296 11.417a9.777 9.777 0 01-1.05 4.433 9.917 9.917 0 01-8.867 5.483 9.777 9.777 0 01-4.433-1.05L1.296 22.5l2.216-6.65a9.776 9.776 0 01-1.05-4.433A9.917 9.917 0 017.946 2.55a9.777 9.777 0 014.433-1.05h.583a9.893 9.893 0 019.334 9.333v.584z"
+        stroke="#191D23"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+    )
+}
+export function CHATICON2({props}) {
+  return (
+    <Svg
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <Path
+        d="M22.296 11.417a9.777 9.777 0 01-1.05 4.433 9.917 9.917 0 01-8.867 5.483 9.777 9.777 0 01-4.433-1.05L1.296 22.5l2.216-6.65a9.776 9.776 0 01-1.05-4.433A9.917 9.917 0 017.946 2.55a9.777 9.777 0 014.433-1.05h.583a9.893 9.893 0 019.334 9.333v.584z"
+        stroke="#fff"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  )
+}
+
+export function PROFILE({props}) {
+  return (
+    <Svg
+      width={22}
+      height={24}
+      viewBox="0 0 22 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <Path
+        d="M20.333 22.5v-2.333a4.667 4.667 0 00-4.666-4.667H6.333a4.667 4.667 0 00-4.666 4.667V22.5M11 10.833A4.667 4.667 0 1011 1.5a4.667 4.667 0 000 9.333z"
+        stroke="#191D23"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  )
+}
+export function PROFILE2({props}) {
+  return (
+    <Svg
+      width={22}
+      height={24}
+      viewBox="0 0 22 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <Path
+        d="M20.333 22.5v-2.333a4.667 4.667 0 00-4.666-4.667H6.333a4.667 4.667 0 00-4.666 4.667V22.5M11 10.833A4.667 4.667 0 1011 1.5a4.667 4.667 0 000 9.333z"
+        stroke="#fff"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  )
+}
+
+
+
+

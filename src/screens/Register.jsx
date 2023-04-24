@@ -5,9 +5,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { screenWidth } from './Welcome';
 import CountryPicker from 'react-native-country-picker-modal'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import Button1 from '../components/Button1';
 
-const Login = ({navigation}) => {
+const Register = ({navigation}) => {
   
 
 const[callingCode,setCallingCode]=useState("+234")
@@ -29,78 +28,45 @@ const[focus, setFocus]=useState(false)
       >
       <Ionicons name="arrow-back-outline" size={30} color="#231F20" />
       </Pressable>
-      <Text style={styles.text1}>Login With</Text>
-      <Text style={styles.text1}>Phone Number</Text>
-      <Text style={styles.text2}>Please enter your phone number correctly.</Text>
+      <Text style={styles.text1}>Register With</Text>
+      <Text style={styles.text1}>Email & Password</Text>
+      <Text style={styles.text2}>Please enter your email correctly.</Text>
+
+  
       <Text
       style={{
         fontSize:18,
         marginTop:20,
         marginBottom:5,
       }}
-      >Phone</Text>
-      <View
-      style={{
-        flexDirection:"row",
-        justifyContent:"space-between",
-        marginBottom:10
-      }}
-      >
+      >Username</Text>
+<View
 
-<View style={{
-  flexDirection:"row",
-  alignItems:"center",
-  backgroundColor:"#9D69FC33",
-  // paddingVertical:10,
-  // paddingHorizontal:10,
-  overflow:"hidden",
-  borderRadius:10,
-  width:"28%"
-}}>
-
-{/* <Text
-style={{
-  fontSize:18,
-}}
->+234</Text> */}
-<CountryPicker
-containerButtonStyle={{
-  // backgroundColor:"#9D69FC33",
-  height:55,
-  minWidth:50,
-  paddingLeft:10,
-  justifyContent:"center"
-
-}}
-withFlagButton={false}
-withCallingCodeButton
-countryCode={countryCode}
-onSelect={(val)=>{
-  setCallingCode(val.callingCode)
-  setCountryCode(val.cca2)
-}}
-/>
-<MaterialIcons name="keyboard-arrow-down" size={30} color="#9BC6F2" />
-</View>
-
+>
 <TextInput
-style={[styles.phoneNoInput,{borderColor: focus?"#9D69FC":"gray"}]}
-placeholder='993 4567 221'
+style={styles.phoneNoInput2}
+placeholder='user name'
 placeholderTextColor={"#848484"}
-keyboardType='numbers-and-punctuation'
-value={phoneNumberVal}
-onChangeText={(val)=>{
- setPhoneNumberVal(val)
-}}
-maxLength={12}
-onFocus={()=> {
-  setFocus(true)
-}}
-onBlur={()=> {
-  setFocus(false)
-}}
+
 />
-      </View>
+</View>
+      <Text
+      style={{
+        fontSize:18,
+        marginTop:20,
+        marginBottom:5,
+      }}
+      >Email</Text>
+<View
+
+>
+<TextInput
+style={styles.phoneNoInput2}
+placeholder='email address'
+placeholderTextColor={"#848484"}
+keyboardType='email-address'
+/>
+</View>
       <Text
       style={{
         fontSize:18,
@@ -118,20 +84,32 @@ placeholderTextColor={"#848484"}
 secureTextEntry
 />
 </View>
- 
- <Button1
- text="Login"
- containerStyles={{
-  
- }}
- />
 
+<View
+style={{
+  position:"absolute",
+  bottom:80,
+  width:screenWidth,
+  paddingHorizontal:30
+}}
+>
+
+<TouchableOpacity style={styles.btn}
+
+>
+
+<Text style={styles.btnText}>
+Register
+</Text>
+</TouchableOpacity>
+
+</View>
     </View>
    </KeyboardAwareScrollView>
   )
 }
 
-export default Login
+export default Register
 
 const styles = StyleSheet.create({
   container:{
@@ -173,5 +151,20 @@ marginTop:10
      fontSize:18,
 
   },
+  btn:{
+    alignItems:"center",
+    justifyContent:"center",
+    backgroundColor:"#9D69FC",
+    borderRadius:20,
+    flexDirection:"row",
+    paddingVertical:15.5,
+    marginVertical:8,
 
+  },
+  btnText:{
+    color:"#ffffff",
+    fontWeight:500,
+    fontSize:18,
+   
+  },
 })
